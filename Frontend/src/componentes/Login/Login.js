@@ -6,8 +6,6 @@ import '../Login/Login.css';
 
 
 const Login = () => {
-
-
     const [ user, setUser ] = useState('');
     const [ password, setPassword] = useState('');
     const [ passwordError, setPasswordError] = useState(false);
@@ -24,10 +22,10 @@ const Login = () => {
 
                 setPasswordError(false);
                 setPassword(value)
-            }
-            
+            }            
         }
     }
+   
     function handleSubmit() {
         let account = { user, password}
         if(account) {
@@ -39,13 +37,14 @@ const Login = () => {
         <div className='login-container'>
             <Titulo text='BLOG'/>
             <Titulo text='BIENVENIDOS!'/>
+            <hr />
             <Etiqueta text='USUARIO' />
             
             <Input
             attribute={{
                     id: 'usuario',
                     name: 'usuario',
-                    type: 'email',
+                    type: 'text',
                     placeholder: 'Ingrese su usuario'
                 }}
 
